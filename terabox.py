@@ -117,13 +117,7 @@ async def get_verify_status(user_id):
     verify = await db_verify_status(user_id)
     return verify
 
-async def update_verify_status(user_id, verify_token="", is_verified=False, verified_time=0, link=""):
-    current = await db_verify_status(user_id)
-    current['verify_token'] = verify_token
-    current['is_verified'] = is_verified
-    current['verified_time'] = verified_time
-    current['link'] = link
-    await db_update_verify_status(user_id, current)
+
 
 @app.on_message(filters.command("start"))
 async def start_command(client, message):
@@ -144,8 +138,7 @@ async def start_command(client, message):
     await sticker_message.delete()
 
     # Get verification status
-    verify_status =True
-    logging.info(f"Verify status for user {user_id}: {verify_status}")
+    verify_status = True
 
     text = message.text
 
@@ -248,7 +241,7 @@ async def handle_message(client, message: Message):
 
     user_mention = message.from_user.mention
     
-    verify_status = =True
+    verify_status =True
 
 
 
