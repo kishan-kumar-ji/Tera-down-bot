@@ -11,6 +11,7 @@ aiohttp
 aiofiles
 pyrofork==2.2.11
 python-dotenv
+aria2c
 gunicorn
 gent
 flask
