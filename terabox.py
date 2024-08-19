@@ -118,7 +118,7 @@ async def get_verify_status(user_id):
     return verify
 
 
-
+a=True
 @app.on_message(filters.command("start"))
 async def start_command(client, message):
     user_id = message.from_user.id
@@ -142,8 +142,8 @@ async def start_command(client, message):
 
     text = message.text
 
-    if verify_status["is_verified"]:
-        logging.info(f"User {user_id} is verified")
+    if a :
+       
         reply_message = (
             f"Welcome, {user_mention}.\n\n"
             "🌟 I am a terabox downloader bot. Send me any terabox link and I will download it within a few seconds and send it to you ✨."
